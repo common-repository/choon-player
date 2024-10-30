@@ -1,0 +1,254 @@
+/*
+ * Styling for Choon Player Wordpress plugin
+ */
+
+ /*
+Copyright (C) 2020 Andy Linton
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+.choon-audioParent {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.choon-audioControlMP3 {
+    width: 100%;
+    margin-top: 1.5rem;
+    float: left;
+}
+
+.choon-audioControlABC {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    float: left;
+}
+
+.choon-loopControlMP3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-flow: flow wrap;
+    justify-content: space-around;
+}
+
+.choon-speedControl {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    float: left;
+}
+
+.choon-playButton {
+    height: 3.0rem;
+    width: 3.0rem;
+    border: none;
+    background: url(../images/play.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: 5px 8px 10px 2px darkslategray;
+}
+
+.choon-pauseButton {
+    height: 3.0rem;
+    width: 3.0rem;
+    border: none;
+    background: url(../images/pause.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: 5px 8px 10px 2px darkslategray;
+}
+
+.choon-stopButton {
+    height: 3.0rem;
+    width: 3.0rem;
+    border: none;
+    background: url(../images/stop.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: 5px 8px 10px 2px darkslategray;
+}
+
+.choon-loopButton {
+    background-color: darkslategrey !important;
+    color: white;
+    cursor: pointer !important;
+    padding: 0.3rem !important;
+    border-radius: 0.5rem !important;
+    font-size: 75% !important;
+    margin-top: 0.5rem;
+    box-shadow: 5px 8px 10px 2px darkslategrey; 
+}
+
+.choon-abc-show {
+    display: block;
+    width: 100%;
+}
+
+.choon-abc-hide {
+    display: none;
+}
+
+/*
+* Overide abcjs defaults
+*/
+.abcjs-inline-audio {
+    margin-top: 0.5em;
+}
+
+.abcjs-inline-audio .abcjs-midi-loop.abcjs-pushed {
+    background-color: steelblue !important;
+}
+
+.abcjs-inline-audio .abcjs-midi-start.abcjs-pushed {
+    background-color: steelblue !important;
+}
+
+.abcjs-inline-audio .abcjs-midi-progress-background {
+    background-color: steelblue;
+}
+
+.abcjs-css-warning {
+    display: none;
+}
+
+/*
+  * The cursor that tracks ABC playback
+  */
+.abcjs-cursor {
+    color: red;
+}
+
+/* END: controls for audio player */
+
+/* START Override slider defaults */
+
+.noUi-target {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.noUi-horizontal {
+    border-radius: 50%;
+    height: 0.8rem;
+}
+
+.noUi-horizontal .noUi-origin {
+    width: 96%;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+    right: inherit;
+    left: auto;
+}
+
+.noUi-handle {
+    border: 1px solid slategrey;
+    border-radius: 0.2rem;
+    background: slategrey;
+    cursor: default;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+    background: none;
+}
+
+.noUi-tooltip {
+    display: block;
+    position: absolute;
+    border: 0 solid darkslategrey;
+    border-radius: 8px;
+    background: transparent;
+    color: darkslategrey;
+    padding: 0 0.1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.noUi-horizontal .noUi-tooltip {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 190%);
+    left: 50%;
+    bottom: 120%;
+    font-size: small;
+    padding: 0.2rem;
+    z-index: -1;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: slategrey;
+    cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle[data-handle='1'] {
+    background: green;
+}
+
+.noUi-horizontal .noUi-handle[data-handle='1'] .noUi-tooltip {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 20%);
+    left: 50%;
+    bottom: 120%;
+    font-size: small;
+    padding: 0.3rem;
+    z-index: -1;
+}
+
+.noUi-connects {
+    height: 60%;
+    background: lightgrey;
+    border: none;
+}
+
+.noUi-connect {
+    background: slategrey;
+
+}
+
+/* END: Override Slider defaults */
